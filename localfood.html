@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역 별 맛집</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="localfood_css.css">
+
+    <header>
+        <h1>🍔 맛도리 🍝</h1>
+        <p>맛있는 곳과 분위기 좋은 곳을 소개합니다.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="#popular">인기 맛집</a>
+        <a href="#new">신규 맛집</a>
+        <a href="localfood.html">지역 별 맛집</a>
+        <a href="#contact">문의하기</a>
+    </nav>
+
+    <p id="search">현재 보고 있는 맛집 지역은 <input type="text">입니다.</p>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <script>
+        let mapOptions = {
+            center: [37.562, 126.9793],
+            zoom: 10
+        }
+        let map = new L.map('map', mapOptions);
+        let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+        map.addLayer(layer);
+        let marker = new L.Marker([37.562, 126.9793]);
+        marker.addTo(map);
+    </script>
+
+    <br><br><br><br><br>
+
+    <footer>
+        맛도리(주) | 대표자 김파이 | 대전광역시 서구 도산로xxx번길, 9층 (자바빌딩) <br>
+    사업자등록번호 111-22-33333 | TEL 1577-xxxx | FAX 042.xxx.xxxx | EMAIL matdori@matdori.com
+    </footer>
+</body>
+</html>

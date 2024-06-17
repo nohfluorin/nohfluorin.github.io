@@ -3,95 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homepage</title>
+    <title>맛도리</title>
 </head>
 
 <body>
 
-<link rel="stylesheet" href="index_css.css">
+    <link rel="stylesheet" href="index_css.css">
 
- <header>
-    <h1 id="page">🎈 MY PAGE 🎀 </h1><br>
-    <h3 id="apple">경주의 공간에 온걸 환영합니다 🤍</h3><br>
- </header>
+    <header>
+        <h1>🍔 맛도리 🍝</h1>
+        <p>맛있는 곳과 분위기 좋은 곳을 소개합니다.</p>
+    </header>
 
+    <nav>
+        <a href="#home">홈</a>
+        <a href="#popular">인기 맛집</a>
+        <a href="#new">신규 맛집</a>
+        <a href="localfood.html">지역 별 맛집</a>
+        <a href="contact.html">문의하기</a>
+    </nav>
 
- <ul id="menu">
-    <li><a href="#">Menu1</a></li>
-    <li><a href="#">Menu2</a></li>
-    <li><a href="#">Menu3</a></li>
+    <div class="login">
+        <a href="login.html">로그인</a>
+        <a href="join.html">회원가입</a>
+    </div>
+
+<!-- ---------------------------------------------------------------------------------     -->
+    <div class = food>
+    <h1>오늘은 뭐먹지 🤔</h1>
+    <form id="inputForm" onsubmit="return false;">
+        <label for="foods">지금 생각나는 음식은..... </label>
+        <br>
+        <br>
+        <input type="text" id="foods" name="foods"><br><br>
+        <button type="button" onclick="pickRandomFood()">✅✅✅✅</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function pickRandomFood() {
+            const inputField = document.getElementById('foods');
+            const foods = inputField.value;
+
+            // 입력된 문자열을 쉼표로 구분하여 음식 목록을 분리
+            const foodList = foods.split(',');
+
+            // 랜덤한 위치의 음식을 선택
+            const randomIndex = Math.floor(Math.random() * foodList.length);
+            const randomFood = foodList[randomIndex].trim(); // 공백 제거
+
+            // 결과 표시
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `오늘은 ${randomFood} ❗❕`;
+        }
+    </script>
+    </div>
+
+<!-- --------------------------------------------------------------------------------- -->
+
+    <br>
+    <br>
+    <br>
+
+    <h1>❗ 오늘의 추천 ❗</h1>
+
+    <div class="container">
+        <div class="card">
+            <a href="https://naver.me/5VeAmJ4i">
+                <img src="images/미세노센세.jpg" width="350" height="250" alt="">
+            </a>
+            <h2>미세노센세 🥘</h2>
+            <h2>⭐ 4.5</h2>
+            <p>탄방동</p>
+            <p>인기메뉴</p>
+            <p>카레 <br> 반숙계란후라이 토핑</p>
+        </div>
+        <div class="card">
+            <a href="https://naver.me/5wHvwr3d">
+                <img src="images/치폴레.jpg" width="350" height="250" alt="">
+            </a>
+            <h3>투웨이버거 치폴레 🍔</h3>
+            <h2>⭐ 4.5</h2>
+            <p>용문동</p>
+            <p>인기메뉴</p>
+            <p>치폴레 더블더블 <br> 치폴레 베이컨 치즈</p>
+        </div>
+        <div class="card">
+            <a href="https://naver.me/I5FcS9JX">
+                <img src="images/동방커피.jpg" width="350" height="250" alt="">
+            </a>
+            <h3>동방커피 ☕</h3>
+            <h2>⭐ 4.7</h2>
+            <p>용문동</p>
+            <p>인기메뉴</p>
+            <p>아인슈페너 <br> 바스크치즈케이크</p>
+        </div>
+    </div>
     
-</ul>
 
+<br>
+<br>
+<!-- --------------------------------------------------------------------------------- -->
+<br>
+<br>
 
+    <h1>🥐 최신 트렌드 테마 🍜🍴</h1>
+    <h3>✔️ 일반인들이 포스팅한 글을 볼 수 있는 공간입니다.</h3>    
+    <div class="container">
+        <div class="card">
+            <a href=dessert.html> <!-- 원하는 URL로 변경 -->
+                <img src="images/원주율.jpg" width="250" height="250" alt="">
+            </a>
+            <h3>🍨 완벽한 디저트 여행 🥨</h3>
+            <h3>당신이 꼭 가봐야 할 곳  BEST 5</h3>
+        </div>
 
- <nav>
- <ul>
-    <li><a href="pr.html"> 저를 소개합니다 :^) </a></li> <br>
-    <li><a href="hobby.html"> 취미 </a></li> <br>
-    <li><a href="3주차.html"> 들어와봐요 </a></li> <br>
-    <li><a href="study.html"> 공부입니다 </a></li> <br>
- </ul>
- </nav>
- 
- <section>
-    <article id="art1">
-        <h2>들어와 주셔서 감사해요 *(੭*ˊᵕˋ)੭*ଘ</h2>
-        <p>열심히 만들어가는 공간입니다 !</p>
-    </article>
- <br>
- <br>
- <br>
-    <article>
-        <h2>🐈🐈‍⬛ 고양이들 🐈🐈‍⬛</h2>
-    </article>
+        <div class="card">
+            <a href=taco.html> <!-- 원하는 URL로 변경 -->
+                <img src="images/스프링.jpg" alt="" width="250" height="250">
+            </a>
+            <h3>🌮 이국적인 느낌 가득 ! </h3>
+            <h3>대전 타코 맛집 5</h3>
+        </div>
 
-    <figure>
-        <img src="image/노랭이.jpg" alt="" width="250" height="250">
-        <img src="image/탄이.jpg" alt="" width="250" height="250">
-    </figure>
+        <div class="card">
+            <a href=burger.html> <!-- 원하는 URL로 변경 -->
+            <img src="images/버기즈.jpg" alt="" width="250" height="250">
+            </a>
+            <h3>🍟 육즙 가득 ~ 🍔</h3>
+            <h3>대전 수제버거 맛집 3</h3>
+        </div>
 
-    <figcaption>저와 같이 살고 있는 노랭이와 탄이입니다 🐈🐈‍⬛</figcaption>
- <br>
- <br>
-    <h2>유입 경로를 알려주세요 ! </h2>
-    <p>다 작성하셨으면 아래 제출하기를 눌러주세요.</p>
-        <textarea name="area1" id="" cols="40" rows="5"></textarea>
+        <div class="card">
+            <a href=Westernfood.html> <!-- 원하는 URL로 변경 -->
+            <img src="images/헤이.jpg" alt="" width="250" height="250">
+            </a>
+            <h3>분위기 깡패 양식 🍴</h3>
+            <h3>대전 양식 맛집 3</h3>
+        </div>
+    </div>
 
-        <script>
-            function showDialog() {
-                alert("작성해주셔서 감사합니다 ^^ 행복한 하루 보내세요구르트 🍀");
-            }
-        </script>
+<br>
+<br>
+<!-- --------------------------------------------------------------------------------- -->
+<br>
+<br>
 
-            <button onclick="showDialog()">제출하기</button>
-        
-        <h2>더 ✨멋진✨ 화면을 만들기 위해 감상 후기 부탁드립니당 ✧( •̀ .̫ •́ )✧</h2>
-            <form>
-                ✅ 디자인 :
-                <input type="radio" name="bad" value="bad1">나쁨
-                <input type="radio" name="soso" value="soso1">보통
-                <input type="radio" name="good" value="good1">너무 좋아요!!!! <br> <br>
-            </form>
-            <p>✅ 수정했으면 하는 부분이나 하고 싶은 말 적어주세요 🙂‍</p>
-            <textarea name="riv" id="" cols="40" rows="5"></textarea>
-        <script>
-            function rev() {
-                alert("적어주셔서 감사합니다람쥐 행복하세요 🍀")
-            }
-        </script>
+<footer>
+    맛도리(주) | 대표자 김파이 | 대전광역시 서구 도산로xxx번길, 9층 (자바빌딩) <br>
+사업자등록번호 111-22-33333 | TEL 1577-xxxx | FAX 042.xxx.xxxx | EMAIL matdori@matdori.com
+</footer>
 
-            <button onclick="rev()">! 입력완료 !</button>
-</form>
-
- </section>
- 
-<aside>
-<p>SNS 바로가기<p>
-    <a href="https://blog.naver.com/nohfluorine"><img src="image/네이버 AI-06.png" alt="" height="50" height="50"></a>
-    <a href="https://www.instagram.com/nohfluorine.kr?igsh=bXRoN3p1Mzd5a2tw&utm_source=qr"><img src="image/pngegg.png" alt="" height="45" height="45"></a>
-</aside>
-    
 
 </body>
+
 </html>
